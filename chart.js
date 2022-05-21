@@ -54,8 +54,8 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 setInterval(()=>{
 
-    const timeSpeed = firebase.database().ref('realtime').child('nhietdo');
-    timeSpeed.on('value',snap =>{
+    const temp = firebase.database().ref('realtime').child('nhietdo');
+          temp.on('value',snap =>{
         console.log("Time : "+snap.val());
 
         var today = new Date();
